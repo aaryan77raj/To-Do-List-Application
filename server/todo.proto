@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package todo;
+
+// Service definition
+service TodoService {
+  // Add a new todo item
+  rpc AddItem(AddItemRequest) returns (AddItemResponse);
+  
+  // Update the status of a todo item
+  rpc UpdateStatus(UpdateStatusRequest) returns (UpdateStatusResponse);
+  
+  // Get the full list of todo items
+  rpc GetList(GetListRequest) returns (GetListResponse);
+  
+  // Stream real-time updates to connected clients
+  rpc StreamUpdates(StreamUpdatesRequest) returns (stream TodoUpdate);
+}
+
+// Message definitions
+message TodoItem {
+  int32 id = 1;
+  string description = 2;
+  TodoStatus status = 3;
+}
+
+enum TodoStatus {
+  PENDING = 0;
+  COMPLETED = 1;
+}
+
+message AddItemRequest {
+  string description = 1;
+}
+
+message AddItemResponse {
+  int32 id = 1;
+  string description = 2;
+  TodoStatus status = 3;
+}
+
+message UpdateStatusRequest {
+  int32 id = 1;
+}
+
+message UpdateStatusResponse {
+  bool success = 1;
+  TodoStatus new_status = 2;
+}
+
+message GetListRequest {
+  // Empty request
+}
+
+message GetListResponse {
+  repeated TodoItem items = 1;
+}
+
+message StreamUpdatesRequest {
+  // Empty request - client subscribes to all updates
+}
+
+message TodoUpdate {
+  UpdateType type = 1;
+  TodoItem item = 2;
+}
+
+enum UpdateType {
+  ITEM_ADDED = 0;
+  ITEM_UPDATED = 1;
+  ITEM_DELETED = 2;
+}

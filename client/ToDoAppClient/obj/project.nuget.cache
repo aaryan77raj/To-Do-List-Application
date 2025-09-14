@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "kCSHs9oUrTA=",
+  "success": true,
+  "projectFilePath": "D:\\SourceCode\\ToDo\\client\\ToDoAppClient\\ToDoAppClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\google.protobuf\\3.24.4\\google.protobuf.3.24.4.nupkg.sha512",
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\grpc.core.api\\2.57.0\\grpc.core.api.2.57.0.nupkg.sha512",
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\grpc.net.client\\2.57.0\\grpc.net.client.2.57.0.nupkg.sha512",
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\grpc.net.common\\2.57.0\\grpc.net.common.2.57.0.nupkg.sha512",
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\grpc.tools\\2.57.0\\grpc.tools.2.57.0.nupkg.sha512",
+    "C:\\Users\\IMMIDART\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
