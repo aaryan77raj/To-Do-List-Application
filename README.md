@@ -220,5 +220,4 @@ While gRPC was chosen for this implementation, WebSockets could be used as an al
 - **Mobile Client**: Create Android/iOS clients
 - **Web Client**: Add web-based client using gRPC-Web
 
-## License
 
